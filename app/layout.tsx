@@ -29,12 +29,18 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: 'ByNadia — ателье пошива и ремонта одежды в Ставрополе',
+
     description:
       'Ремонт, подгонка, переделка и индивидуальный пошив одежды в Ставрополе. Обсудим ваш заказ по фотографии, эскизу или образцу.',
+
     url: 'https://bynadia.ru',
+
     siteName: 'ByNadia',
+
     locale: 'ru_RU',
+
     type: 'website',
+
     images: [
       {
         url: '/images/22e9d25a-3e3c-465c-9c12-587b85f39d0c.jpg',
@@ -47,10 +53,13 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
+
     title: 'ByNadia — ателье пошива и ремонта одежды в Ставрополе',
+
     description:
       'Ремонт, подгонка, переделка и индивидуальный пошив одежды в Ставрополе.',
-    images: ['/images/og-image.jpg'],
+
+    images: ['/images/22e9d25a-3e3c-465c-9c12-587b85f39d0c.jpg'],
   },
 
   robots: {
@@ -70,7 +79,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ru" className={`${fraunces.variable} ${inter.variable} bg-background`}>
+    <html
+      lang="ru"
+      className={`${fraunces.variable} ${inter.variable} bg-background`}
+    >
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
