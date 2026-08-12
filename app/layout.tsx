@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: '/images/22e9d25a-3e3c-465c-9c12-587b85f39d0c.jpg',
+        url: '/images/22e9d25a-3e3c-465c-9c12-587b85f39d0c.png',
         width: 1200,
         height: 630,
         alt: 'ByNadia — ателье пошива и ремонта одежды в Ставрополе',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     description:
       'Ремонт, подгонка, переделка и индивидуальный пошив одежды в Ставрополе.',
 
-    images: ['/images/22e9d25a-3e3c-465c-9c12-587b85f39d0c.jpg'],
+    images: ['/images/22e9d25a-3e3c-465c-9c12-587b85f39d0c.png'],
   },
 
   robots: {
