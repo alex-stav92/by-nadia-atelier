@@ -1,5 +1,5 @@
-import { Reveal } from './reveal'
-import { PROCESS_STEPS } from './site-data'
+import { Reveal } from '@/components/reveal'
+import { PROCESS_STEPS } from '@/components/site-data'
 
 export function Process() {
   return (

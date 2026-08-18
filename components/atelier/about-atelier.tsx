@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Reveal } from './reveal'
+import { Reveal } from '@/components/reveal'
 
 const ADVANTAGES = ['Индивидуальный подход', 'Аккуратная работа', 'Внимание к деталям']
 

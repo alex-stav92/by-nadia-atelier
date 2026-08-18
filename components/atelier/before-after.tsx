@@ -2,8 +2,8 @@
 
 import { useCallback, useRef, useState } from 'react'
 import Image from 'next/image'
-import { Reveal } from './reveal'
-import { BEFORE_AFTER } from './site-data'
+import { Reveal } from '@/components/reveal';
+import { BEFORE_AFTER } from '@/components/site-data'
 
 function CompareSlider({
   before,

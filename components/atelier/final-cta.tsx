@@ -1,6 +1,6 @@
-import { Reveal } from './reveal'
-import { CtaButton } from './cta-button'
 
+import { Reveal } from '@/components/reveal'
+import { CtaButton } from '@/components/cta-button'
 export function FinalCta() {
   return (
     <section className="border-t border-border/60 py-24 md:py-32">

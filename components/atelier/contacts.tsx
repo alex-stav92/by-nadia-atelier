@@ -1,6 +1,5 @@
 import { Phone, Send, MessageCircle, MapPin } from 'lucide-react'
-import { Reveal } from './reveal'
-
+import { Reveal } from '@/components/reveal'
 const CONTACTS = [
   { label: 'Телефон', value: 'Добавить позже', icon: Phone, href: '#' },
   { label: 'Telegram', value: 'Добавить позже', icon: Send, href: '#' },

@@ -1,5 +1,5 @@
 import { Quote } from 'lucide-react'
-import { Reveal } from './reveal'
+import { Reveal } from '@/components//reveal'
 
 export function Testimonials() {
   return (

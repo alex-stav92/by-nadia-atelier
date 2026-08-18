@@ -3,9 +3,8 @@
 import { useState } from 'react'
 import { Plus } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { Reveal } from './reveal'
-import { FAQ as FAQ_ITEMS } from './site-data'
-
+import { Reveal } from '@/components/reveal'
+import { FAQ as FAQ_ITEMS } from '@/components/site-data'
 export function Faq() {
   const [open, setOpen] = useState<number | null>(0)
 

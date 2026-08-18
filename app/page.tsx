@@ -1,37 +1,26 @@
+import Hero from '@/components/home/Hero-home';
+import DirectionChoice from '@/components/home/DirectionChoice-home';
+import About from '@/components/home/About-home';
+import Atmosphere from '@/components/home/Atmosphere-home';
+import CtaSection from '@/components/home/CtaSection-home';
 import { SiteHeader } from '@/components/site-header'
-import { Hero } from '@/components/hero'
-import { Services } from '@/components/services'
-import { Gallery } from '@/components/gallery'
-import { BeforeAfter } from '@/components/before-after'
-import { About } from '@/components/about'
-import { Process } from '@/components/process'
-import { Pricing } from '@/components/pricing'
-import { Testimonials } from '@/components/testimonials'
-import { Faq } from '@/components/faq'
-import { FinalCta } from '@/components/final-cta'
-import { Contacts } from '@/components/contacts'
 import { SiteFooter } from '@/components/site-footer'
 import { MobileCta } from '@/components/mobile-cta'
+import Header from '@/components/home/Header';
+import Footer from '@/components/home/Footer';
 
-export default function Page() {
+export default function Home() {
   return (
     <>
-      <SiteHeader />
-      <main>
-        <Hero />
-        <Services />
-        <Gallery />
-        <BeforeAfter />
-        <About />
-        <Process />
-        <Pricing />
-        <Testimonials />
-        <Faq />
-        <FinalCta />
-        <Contacts />
+      <Header />
+          <main>
+      <Hero />
+      <DirectionChoice />
+      <About />
+      <Atmosphere />
+      <CtaSection />
       </main>
-      <SiteFooter />
-      <MobileCta />
+<Footer />
     </>
-  )
+  );
 }

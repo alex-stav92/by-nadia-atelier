@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
-import { Reveal } from './reveal'
-import { WORK_CATEGORIES, WORKS } from './site-data'
+import { Reveal } from '@/components/reveal'
+import { WORK_CATEGORIES, WORKS } from '@/components/site-data'
 
 export function Gallery() {
   const [active, setActive] = useState('Все')

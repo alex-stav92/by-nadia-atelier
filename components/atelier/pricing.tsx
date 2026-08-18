@@ -1,6 +1,6 @@
-import { Reveal } from './reveal'
-import { CtaButton } from './cta-button'
-import { PRICING } from './site-data'
+import { Reveal } from '@/components/reveal'
+import { CtaButton } from '@/components/cta-button'
+import { PRICING } from '@/components/site-data'
 
 export function Pricing() {
   return (

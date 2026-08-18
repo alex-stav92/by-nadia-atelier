@@ -1,36 +1,84 @@
+/* =========================================================
+   🟢 NEXT.JS / TAILWIND 4
+   Базовые импорты проекта
+========================================================= */
+
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 
+
+/* =========================================================
+   🟢 TAILWIND 4
+   Dark mode через класс .dark
+========================================================= */
+
 @custom-variant dark (&:is(.dark *));
 
+
+/* =========================================================
+   🟢 TAILWIND 4 — DESIGN TOKENS
+   Общие цвета, шрифты, радиусы и анимации
+========================================================= */
+
 @theme inline {
+
+  /* =======================================================
+     🟢 SHADCN / NEXT
+     Системные цвета
+  ======================================================= */
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
+
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+
   --color-destructive: var(--destructive);
+
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
 
+
+  /* =======================================================
+     🟢 ШРИФТЫ
+     Подключаются через next/font
+  ======================================================= */
+
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+
+
+  /* =======================================================
+     🟢 РАДИУСЫ
+  ======================================================= */
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+
+  /* =======================================================
+     🟢 ATELIER
+     Базовая анимация
+  ======================================================= */
 
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 
@@ -39,41 +87,131 @@
       opacity: 0;
       transform: translateY(20px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
+
+
+  /* =======================================================
+     🔵 BY NADIA — ГЛАВНАЯ
+     Фирменная палитра INK
+     
+     Использование:
+     bg-ink-900
+     text-ink-900
+     border-ink-200
+  ======================================================= */
+
+  --color-ink-50: #f7f5f1;
+  --color-ink-100: #ebe8e1;
+  --color-ink-200: #d8d4ca;
+  --color-ink-300: #b9b4a9;
+  --color-ink-400: #918c82;
+  --color-ink-500: #6f6a62;
+  --color-ink-600: #57534c;
+  --color-ink-700: #45413b;
+  --color-ink-800: #302e2a;
+  --color-ink-900: #24221f;
+  --color-ink-950: #181715;
+
+
+  /* =======================================================
+     🔵 BY NADIA — ГЛАВНАЯ
+     Фирменная палитра SAND
+     
+     Использование:
+     bg-sand-50
+     text-sand-900
+     border-sand-200
+  ======================================================= */
+
+  --color-sand-50: #faf8f3;
+  --color-sand-100: #f3efe6;
+  --color-sand-200: #e8e1d3;
+  --color-sand-300: #d5cbbb;
+  --color-sand-400: #b9ae9c;
+  --color-sand-500: #9b907e;
+  --color-sand-600: #7c7162;
+  --color-sand-700: #62594e;
+  --color-sand-800: #494239;
+  --color-sand-900: #322e28;
+  --color-sand-950: #211f1b;
 }
 
+
+/* =========================================================
+   🟡 ATELIER
+   Основная цветовая тема проекта
+========================================================= */
+
 :root {
+
   color-scheme: light;
   --radius: 0.5rem;
 
-  /* Warm milky / atelier palette */
+
+  /* =======================================================
+     🟡 ФОН
+  ======================================================= */
+
   --background: oklch(0.972 0.008 83);
   --foreground: oklch(0.28 0.006 60);
+
+
+  /* =======================================================
+     🟡 CARD
+  ======================================================= */
 
   --card: oklch(0.99 0.005 85);
   --card-foreground: oklch(0.28 0.006 60);
 
+
+  /* =======================================================
+     🟡 POPOVER
+  ======================================================= */
+
   --popover: oklch(0.99 0.005 85);
   --popover-foreground: oklch(0.28 0.006 60);
 
-  /* Graphite */
-  --primary: oklch(0.31 0.007 55);
+
+  /* =======================================================
+     🟡 GRAPHITE
+  ======================================================= */
+
+ --primary: #181715;
   --primary-foreground: oklch(0.975 0.008 83);
 
-  /* Beige */
+
+  /* =======================================================
+     🟡 BEIGE
+  ======================================================= */
+
   --secondary: oklch(0.93 0.014 78);
   --secondary-foreground: oklch(0.34 0.008 55);
+
+
+  /* =======================================================
+     🟡 MUTED
+  ======================================================= */
 
   --muted: oklch(0.935 0.013 80);
   --muted-foreground: oklch(0.52 0.012 58);
 
-  /* Muted clay accent */
+
+  /* =======================================================
+     🟡 TERRACOTTA
+  ======================================================= */
+
   --accent: oklch(0.62 0.084 45);
   --accent-foreground: oklch(0.985 0.006 83);
+
+
+  /* =======================================================
+     🟢 SHADCN
+  ======================================================= */
 
   --destructive: oklch(0.577 0.245 27.325);
 
@@ -82,22 +220,113 @@
   --ring: oklch(0.62 0.084 45);
 }
 
+
+/* =========================================================
+   🟢 BASE
+   Общие настройки HTML / body
+========================================================= */
+
 @layer base {
+
+  /* -------------------------------------------------------
+     🟢 SHADCN
+     Общие border и focus ring
+  ------------------------------------------------------- */
+
   * {
     @apply border-border outline-ring/50;
   }
+
+
+  /* -------------------------------------------------------
+     🟢 ОБЩИЕ НАСТРОЙКИ HTML
+  ------------------------------------------------------- */
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+
+    /* 🔵 BY NADIA — сглаживание шрифтов */
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
+
+  /* -------------------------------------------------------
+     🟡 ATELIER
+     Глобальный body
+  ------------------------------------------------------- */
+
   body {
     @apply bg-background text-foreground;
+
     font-feature-settings: 'ss01', 'cv01';
   }
+
+
+  /* -------------------------------------------------------
+     🟢 ЯКОРЯ
+  ------------------------------------------------------- */
+
   section[id] {
     scroll-margin-top: 5rem;
   }
+
+
+  /* -------------------------------------------------------
+     🔵 BY NADIA
+     Цвет выделения текста
+  ------------------------------------------------------- */
+
+  ::selection {
+    @apply bg-ink-900 text-sand-50;
+  }
 }
+
+
+/* =========================================================
+   🔵 BY NADIA — ГЛАВНАЯ
+   Анимация появления элементов
+========================================================= */
+
+@layer utilities {
+
+  .reveal {
+    opacity: 0;
+  }
+
+  .reveal.is-visible {
+    animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  /* =======================================================
+     🔵 BY NADIA
+     Балансировка текста
+  ======================================================= */
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+/* =========================================================
+   🟢 ОБЩИЙ CONTAINER
+========================================================= */
 
 @utility container-x {
   @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;

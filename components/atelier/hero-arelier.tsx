@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { CtaButton } from './cta-button'
+import { CtaButton } from '@/components/cta-button'
 
 export function Hero() {
   return (
@@ -41,7 +41,7 @@ export function Hero() {
         <div className="animate-fade-up [animation-delay:120ms]">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-secondary">
             <Image
-              src="/images/22e9d25a-3e3c-465c-9c12-587b85f39d0c.png"
+              src="/images/null-model.png"
               alt="Мастер за швейной машиной в светлой современной мастерской"
               fill
               priority

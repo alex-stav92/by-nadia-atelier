@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: 'https://bynadia.ru/images/22e9d25a-3e3c-465c-9c12-587b85f39d0c.png',
+        url: 'https://bynadia.ru/images/null-model.png',
         width: 1200,
         height: 630,
         alt: 'ByNadia — ателье пошива и ремонта одежды в Ставрополе',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
       'Ремонт, подгонка, переделка и индивидуальный пошив одежды в Ставрополе.',
 
     images: [
-      'https://bynadia.ru/images/22e9d25a-3e3c-465c-9c12-587b85f39d0c.png',
+      'https://bynadia.ru/images/null-model.png',
     ],
   },
 
@@ -83,6 +83,7 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
+      data-scroll-behavior="smooth"
       className={`${fraunces.variable} ${inter.variable} bg-background`}
     >
       <body className="font-sans antialiased">
