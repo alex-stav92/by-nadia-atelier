@@ -1,10 +1,4 @@
-export const NAV_LINKS = [
-  { label: 'Услуги', href: '#services' },
-  { label: 'Работы', href: '#works' },
-  { label: 'О нас', href: '#about' },
-  { label: 'Как заказать', href: '#process' },
-  { label: 'Контакты', href: '#contacts' },
-]
+
 
 export type Service = {
   id: string
@@ -129,5 +123,49 @@ export const FAQ = [
   {
     q: 'Сколько занимает работа?',
     a: 'Сроки зависят от вида и сложности работы. Уточним их при обсуждении заказа.',
+  },
+]
+export const CONTACTS = {
+  city: 'Ставрополь',
+  country: 'Россия',
+
+  phone: 'Добавить позже',
+  phoneHref: '#',
+
+  telegram: 'Добавить позже',
+  telegramHref: '#',
+
+  whatsapp: 'Добавить позже',
+  whatsappHref: '#',
+
+  email: 'Добавить позже',
+  emailHref: '#',
+}
+export const NAV_LINKS = [
+  { label: 'Услуги', href: '#services' },
+  { label: 'Работы', href: '#works' },
+  { label: 'О нас', href: '#about' },
+  { label: 'Как заказать', href: '#process' },
+  { label: 'Контакты', href: '#contacts' },
+]
+
+export const PRODUCTION_NAV_LINKS = [
+  { label: 'Услуги', href: '#services' },
+  { label: 'Работы', href: '#works' },
+  { label: 'О нас', href: '#about' },
+  { label: 'Как заказать', href: '#process' },
+  { label: 'Контакты', href: '#contacts' },
+]
+
+export const DIRECTIONS = [
+  {
+    label: 'Atelier',
+    description: 'Частным клиентам',
+    href: '/atelier',
+  },
+  {
+    label: 'Production',
+    description: 'Брендам и компаниям',
+    href: '/production',
   },
 ]

@@ -1,89 +1,113 @@
-'use client';
-import { useReveal } from '@/hooks/useReveal';
+'use client'
+
+import Image from 'next/image'
+import { useReveal } from '@/hooks/useReveal'
+import { CtaButton } from '@/components/cta-button'
 
 export default function Hero() {
-  const { ref, visible } = useReveal<HTMLDivElement>();
+  const { ref, visible } = useReveal<HTMLDivElement>()
 
   return (
     <section
       id="home"
       ref={ref}
-      className="relative min-h-[100svh] flex flex-col justify-end overflow-hidden bg-cream-100 pt-28"
+      className="relative overflow-hidden pt-28 md:pt-32"
     >
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <div
-          className={`absolute inset-0 bg-cover bg-center transition-transform duration-[1.6s] ease-out-soft ${
-            visible ? 'scale-100' : 'scale-105'
-          }`}
-          style={{
-            backgroundImage:
-              "url('https://images.pexels.com/photos/4622205/pexels-photo-4622205.jpeg?auto=compress&cs=tinysrgb&h=1400&w=2000')",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-cream-100/60 via-cream-100/20 to-cream-100" />
-        <div className="absolute inset-0 bg-gradient-to-r from-cream-100/50 to-transparent" />
-      </div>
+      <div className="container-x grid items-center gap-10 pb-16 md:pb-24 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
 
-      {/* Content */}
-      <div className="relative container-px pb-16 md:pb-24 lg:pb-32">
-        <div className="max-w-4xl">
-          <p
-            className={`eyebrow mb-6 ${
-              visible ? 'animate-fade-down' : 'opacity-0'
-            }`}
-            style={{ animationDelay: '0.2s' }}
-          >
+        {/* TEXT */}
+        <div
+          className={visible ? 'animate-fade-up' : 'opacity-0'}
+        >
+          <p className="flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-muted-foreground">
+            <span className="h-px w-8 bg-accent" />
             BY NADIA Production
           </p>
-          <h1
-            className={`heading-serif text-[44px] sm:text-[60px] md:text-[76px] lg:text-[88px] text-ink text-balance ${
-              visible ? 'animate-fade-up' : 'opacity-0'
-            }`}
-            style={{ animationDelay: '0.35s' }}
-          >
+
+          <h1 className="mt-6 font-serif text-[2.6rem] leading-[1.05] tracking-tight text-balance text-foreground sm:text-6xl lg:text-7xl">
             Производство одежды
             <br />
             для брендов
-            <br className="hidden sm:block" /> и компаний.
+            <br className="hidden sm:block" />
+            и компаний.
           </h1>
-          <p
-            className={`mt-8 max-w-xl font-sans text-[15px] md:text-[17px] text-ink/65 leading-relaxed ${
-              visible ? 'animate-fade-up' : 'opacity-0'
-            }`}
-            style={{ animationDelay: '0.55s' }}
-          >
-            Небольшое швейное производство в Ставрополе. Помогаем брендам и
-            компаниям создавать изделия — от первого образца до готовой партии.
+
+          <p className="mt-6 max-w-md text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+            Небольшое швейное производство в Ставрополе.
+            Помогаем брендам и компаниям создавать изделия —
+            от первого образца до готовой партии.
           </p>
-          <div
-            className={`mt-10 flex flex-col sm:flex-row gap-4 ${
-              visible ? 'animate-fade-up' : 'opacity-0'
-            }`}
-            style={{ animationDelay: '0.75s' }}
-          >
-            <a href="#contact" className="btn-primary">
+
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <CtaButton
+              href="#contact"
+              size="lg"
+              variant="accent"
+            >
               Обсудить проект
-            </a>
-            <a href="#services" className="btn-outline">
+            </CtaButton>
+
+            <CtaButton
+              href="#services"
+              size="lg"
+              variant="outline"
+            >
               Посмотреть возможности
-            </a>
+            </CtaButton>
+          </div>
+
+          <p className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted-foreground">
+            {[
+              'Небольшие партии',
+              'Гибкое производство',
+              'Прямое общение',
+              'Ставрополь',
+            ].map((item, i) => (
+              <span
+                key={item}
+                className="flex items-center gap-3"
+              >
+                {i > 0 && (
+                  <span className="text-accent">·</span>
+                )}
+
+                {item}
+              </span>
+            ))}
+          </p>
+        </div>
+
+        {/* IMAGE */}
+        <div
+          className={
+            visible
+              ? 'animate-fade-up [animation-delay:120ms]'
+              : 'opacity-0'
+          }
+        >
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-secondary">
+            <Image
+              src="https://images.pexels.com/photos/4622205/pexels-photo-4622205.jpeg?auto=compress&cs=tinysrgb&h=1400&w=2000"
+              alt="Швейное производство By Nadia"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+
+            <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/20 bg-background/80 px-5 py-4 backdrop-blur-md">
+              <p className="font-serif text-lg text-foreground">
+                Производство от образца до партии
+              </p>
+
+              <p className="mt-0.5 text-sm text-muted-foreground">
+                Небольшие партии · Гибкий подход
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Scroll hint */}
-      <div className="relative container-px pb-8">
-        <div
-          className={`flex items-center gap-3 ${visible ? 'animate-fade-in' : 'opacity-0'}`}
-          style={{ animationDelay: '1s' }}
-        >
-          <span className="h-px w-10 bg-ink/30" />
-          <span className="font-sans text-[10px] uppercase tracking-wide-3 text-ink/40">
-            Листайте, чтобы узнать больше
-          </span>
-        </div>
       </div>
     </section>
-  );
+  )
 }

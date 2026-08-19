@@ -10,7 +10,7 @@ import { Testimonials } from '@/components/atelier/testimonials'
 import { Faq } from '@/components/atelier/faq'
 import { FinalCta } from '@/components/atelier/final-cta'
 import { Contacts } from '@/components/atelier/contacts'
-import { SiteFooter } from '@/components/site-footer'
+import  SiteFooter  from '@/components/site-footer'
 import { MobileCta } from '@/components/mobile-cta'
 
 export default function Page() {

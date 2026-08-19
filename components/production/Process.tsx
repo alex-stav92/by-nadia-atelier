@@ -1,90 +1,180 @@
-'use client';
-import { useReveal } from '@/hooks/useReveal';
-import { PROCESS_STEPS } from '@/data/content';
+'use client'
+
+import { useReveal } from '@/hooks/useReveal'
+import { PROCESS_STEPS } from '@/data/content'
 
 export default function Process() {
-  const { ref, visible } = useReveal<HTMLDivElement>();
+  const { ref, visible } = useReveal<HTMLDivElement>()
 
   return (
-    <section className="section-py bg-cream-200">
-      <div ref={ref} className="container-px">
-        <div className="mb-14 md:mb-20 max-w-2xl">
+    <section className="border-t border-border/60 bg-secondary/40 py-20 md:py-28">
+      <div ref={ref} className="container-x">
+
+        {/* =================================================
+            HEADER
+        ================================================= */}
+
+        <div className="mb-12 max-w-2xl md:mb-16">
           <p
-            className={`eyebrow mb-5 reveal-fade ${visible ? 'is-visible' : ''}`}
-            style={{ animationDelay: '0.1s' }}
+            className={`text-xs uppercase tracking-[0.32em] text-accent ${
+              visible ? 'animate-fade-up' : 'opacity-0'
+            }`}
           >
             Процесс
           </p>
+
           <h2
-            className={`heading-serif text-[32px] sm:text-[40px] md:text-[48px] text-ink reveal ${visible ? 'is-visible' : ''}`}
-            style={{ animationDelay: '0.2s' }}
+            className={`mt-4 font-serif text-4xl leading-tight tracking-tight text-foreground text-balance md:text-5xl ${
+              visible ? 'animate-fade-up' : 'opacity-0'
+            }`}
+            style={{
+              animationDelay: '100ms',
+            }}
           >
             Как мы работаем
           </h2>
+
+          <p
+            className={`mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground ${
+              visible ? 'animate-fade-up' : 'opacity-0'
+            }`}
+            style={{
+              animationDelay: '180ms',
+            }}
+          >
+            От первого обсуждения задачи до готовой партии —
+            последовательно проходим каждый этап производства.
+          </p>
         </div>
 
-        {/* Desktop horizontal timeline */}
+
+        {/* =================================================
+            DESKTOP TIMELINE
+        ================================================= */}
+
         <div className="hidden lg:block">
           <div className="relative">
-            {/* Line */}
-            <div className="absolute top-[34px] left-0 right-0 h-px bg-burgundy/20" />
+
+            {/* BASE LINE */}
+            <div className="absolute left-0 right-0 top-7 h-px bg-border" />
+
+            {/* ANIMATED LINE */}
             <div
-              className={`absolute top-[34px] left-0 h-px bg-burgundy transition-all duration-1000 ease-out-soft ${
+              className={`absolute left-0 top-7 h-px bg-accent transition-all duration-[1200ms] ease-out ${
                 visible ? 'w-full' : 'w-0'
               }`}
-              style={{ transitionDelay: '0.4s' }}
+              style={{
+                transitionDelay: '350ms',
+              }}
             />
 
-            <div className="grid grid-cols-6 gap-4">
+            {/* STEPS */}
+            <div className="relative grid grid-cols-6 gap-6">
+
               {PROCESS_STEPS.map((step, i) => (
-                <div
+                <article
                   key={step.num}
-                  className={`relative reveal ${visible ? 'is-visible' : ''}`}
-                  style={{ animationDelay: `${0.4 + i * 0.12}s` }}
+                  className={`group relative flex flex-col items-center ${
+                    visible ? 'animate-fade-up' : 'opacity-0'
+                  }`}
+                  style={{
+                    animationDelay: `${350 + i * 90}ms`,
+                  }}
                 >
-                  <div className="flex items-center justify-center h-[68px]">
-                    <span className="flex items-center justify-center w-[68px] h-[68px] rounded-full bg-cream-200 border border-burgundy/30 font-sans text-[13px] font-medium text-burgundy">
+
+                  {/* NUMBER */}
+
+<div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border border-accent/40 bg-secondary font-serif text-lg text-accent transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-background">
+  {step.num}
+</div>
+
+
+                  {/* CONTENT */}
+
+                  <div className="mt-7 w-full text-center">
+                    <h3 className="font-serif text-xl leading-tight tracking-tight text-foreground">
+                      {step.title}
+                    </h3>
+
+                    <p className="mx-auto mt-3 max-w-[190px] text-sm leading-relaxed text-muted-foreground">
+                      {step.description}
+                    </p>
+                  </div>
+
+                </article>
+              ))}
+
+            </div>
+          </div>
+        </div>
+
+
+        {/* =================================================
+            MOBILE TIMELINE
+        ================================================= */}
+
+        <div className="lg:hidden">
+          <div className="relative">
+
+            {/* BASE LINE */}
+
+            <div className="absolute bottom-4 left-7 top-4 w-px bg-border" />
+
+            {/* ANIMATED LINE */}
+
+            <div
+              className={`absolute left-7 top-4 w-px bg-accent transition-all duration-[1200ms] ease-out ${
+                visible ? 'h-[calc(100%-32px)]' : 'h-0'
+              }`}
+              style={{
+                transitionDelay: '350ms',
+              }}
+            />
+
+            {/* STEPS */}
+
+            <div className="space-y-10">
+
+              {PROCESS_STEPS.map((step, i) => (
+                <article
+                  key={step.num}
+                  className={`group relative flex gap-6 ${
+                    visible ? 'animate-fade-up' : 'opacity-0'
+                  }`}
+                  style={{
+                    animationDelay: `${350 + i * 90}ms`,
+                  }}
+                >
+
+                  {/* NUMBER */}
+
+                  <div className="relative z-10 flex-shrink-0">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full border border-accent/40 bg-secondary font-serif text-base text-accent transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-background">
                       {step.num}
                     </span>
                   </div>
-                  <h3 className="mt-6 font-sans text-[12px] uppercase tracking-wide-2 text-ink font-semibold text-center">
-                    {step.title}
-                  </h3>
-                  <p className="mt-3 font-sans text-[13px] text-ink/55 leading-relaxed text-center max-w-[200px] mx-auto">
-                    {step.description}
-                  </p>
-                </div>
+
+
+                  {/* CONTENT */}
+
+                  <div className="pt-1">
+                    <h3 className="font-serif text-xl leading-tight tracking-tight text-foreground">
+                      {step.title}
+                    </h3>
+
+                    <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
+                      {step.description}
+                    </p>
+                  </div>
+
+                </article>
               ))}
+
             </div>
           </div>
         </div>
 
-        {/* Mobile vertical timeline */}
-        <div className="lg:hidden">
-          <div className="relative pl-10">
-            <div className="absolute left-[19px] top-2 bottom-2 w-px bg-burgundy/20" />
-            <div className="space-y-10">
-              {PROCESS_STEPS.map((step, i) => (
-                <div
-                  key={step.num}
-                  className={`relative reveal ${visible ? 'is-visible' : ''}`}
-                  style={{ animationDelay: `${0.3 + i * 0.1}s` }}
-                >
-                  <span className="absolute -left-10 top-0 flex items-center justify-center w-10 h-10 rounded-full bg-cream-200 border border-burgundy/30 font-sans text-[11px] font-medium text-burgundy">
-                    {step.num}
-                  </span>
-                  <h3 className="font-sans text-[12px] uppercase tracking-wide-2 text-ink font-semibold pt-2">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 font-sans text-[14px] text-ink/55 leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
-  );
+  )
 }

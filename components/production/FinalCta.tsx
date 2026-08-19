@@ -1,42 +1,78 @@
-'use client';
-import { useReveal } from '@/hooks/useReveal';
+'use client'
+
+import { useReveal } from '@/hooks/useReveal'
+import { CtaButton } from '@/components/cta-button'
 
 export default function FinalCta() {
-  const { ref, visible } = useReveal<HTMLDivElement>();
+  const { ref, visible } = useReveal<HTMLDivElement>()
 
   return (
-    <section className="bg-burgundy text-cream-50">
-      <div ref={ref} className="container-px section-py">
-        <div className="max-w-3xl">
+    <section className="border-t border-border/60 bg-secondary/40 py-24 md:py-32">
+      <div ref={ref} className="container-x">
+        <div className="mx-auto max-w-3xl text-center">
+
           <p
-            className={`font-sans text-[11px] uppercase tracking-wide-3 text-cream-50/50 mb-6 reveal-fade ${visible ? 'is-visible' : ''}`}
-            style={{ animationDelay: '0.1s' }}
+            className={`text-xs uppercase tracking-[0.32em] text-accent ${
+              visible ? 'animate-fade-up' : 'opacity-0'
+            }`}
           >
             Обсудим проект
           </p>
+
           <h2
-            className={`heading-serif text-[40px] sm:text-[56px] md:text-[72px] text-cream-50 text-balance reveal ${visible ? 'is-visible' : ''}`}
-            style={{ animationDelay: '0.2s' }}
+            className={`mt-5 font-serif text-4xl leading-[1.08] tracking-tight text-balance text-foreground sm:text-5xl md:text-6xl ${
+              visible ? 'animate-fade-up' : 'opacity-0'
+            }`}
+            style={{
+              animationDelay: '100ms',
+            }}
           >
             Есть идея для проекта?
           </h2>
+
           <p
-            className={`mt-8 max-w-xl font-sans text-[16px] md:text-[18px] text-cream-50/65 leading-relaxed reveal ${visible ? 'is-visible' : ''}`}
-            style={{ animationDelay: '0.35s' }}
+            className={`mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground ${
+              visible ? 'animate-fade-up' : 'opacity-0'
+            }`}
+            style={{
+              animationDelay: '200ms',
+            }}
           >
-            Расскажите, что хотите создать. Обсудим объём, материалы, сроки и
-            возможности производства.
+            Расскажите, что хотите создать. Обсудим объём, материалы,
+            сроки и возможности производства.
           </p>
+
           <div
-            className={`mt-12 reveal ${visible ? 'is-visible' : ''}`}
-            style={{ animationDelay: '0.5s' }}
+            className={`mt-10 flex flex-col justify-center gap-3 sm:flex-row ${
+              visible ? 'animate-fade-up' : 'opacity-0'
+            }`}
+            style={{
+              animationDelay: '300ms',
+            }}
           >
-            <a href="#contact" className="btn-ghost-light">
+            <CtaButton
+              href="#contact"
+              size="lg"
+              variant="primary"
+              className="group"
+            >
               Обсудить проект
-            </a>
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </CtaButton>
+
+            <CtaButton
+              href="#contact"
+              size="lg"
+              variant="outline"
+            >
+              Получить консультацию
+            </CtaButton>
           </div>
+
         </div>
       </div>
     </section>
-  );
+  )
 }

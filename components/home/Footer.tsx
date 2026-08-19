@@ -1,71 +1,65 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-ink-900/10 bg-ink-950 text-sand-100">
-      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
-        
-        <div className="grid gap-12 md:grid-cols-3">
+    <footer className="bg-foreground text-background">
+      <div className="container-x py-16 md:py-20">
 
-          {/* =================================================
-              BY NADIA
-          ================================================= */}
+        <div className="grid gap-12 md:grid-cols-3 md:gap-10">
 
-          <div>
+          {/* BRAND */}
+          <div className="max-w-sm">
             <Link
               href="/"
-              className="font-serif text-2xl font-medium tracking-brand text-sand-50 transition-opacity hover:opacity-70"
+              className="font-serif text-2xl tracking-[0.18em] transition-opacity duration-300 hover:opacity-70"
             >
               BY NADIA
             </Link>
 
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-sand-300">
-              Швейное мастерство для людей и брендов. Ателье и производство одежды.
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-background/60">
+              Швейное мастерство для людей и брендов.
+              Ателье и производство одежды.
+            </p>
+
+            <p className="mt-6 text-xs uppercase tracking-[0.28em] text-background/35">
+              Ставрополь · Россия
             </p>
           </div>
 
-
-          {/* =================================================
-              НАПРАВЛЕНИЯ
-          ================================================= */}
-
+          {/* DIRECTIONS */}
           <div>
-            <h3 className="text-[11px] font-medium uppercase tracking-brand text-sand-400">
+            <h3 className="text-[11px] uppercase tracking-[0.28em] text-background/35">
               Направления
             </h3>
 
-            <ul className="mt-5 space-y-3 text-sm">
+            <ul className="mt-5 space-y-3">
               <li>
                 <Link
                   href="/atelier"
-                  className="text-sand-100 transition-colors hover:text-sand-400"
+                  className="text-sm text-background/70 transition-colors duration-300 hover:text-background"
                 >
-                  Atelier — Частным клиентам
+                  Atelier — частным клиентам
                 </Link>
               </li>
 
               <li>
                 <Link
                   href="/production"
-                  className="text-sand-100 transition-colors hover:text-sand-400"
+                  className="text-sm text-background/70 transition-colors duration-300 hover:text-background"
                 >
-                  Production — Брендам
+                  Production — брендам
                 </Link>
               </li>
             </ul>
           </div>
 
-
-          {/* =================================================
-              КОНТАКТЫ
-          ================================================= */}
-
+          {/* CONTACTS */}
           <div>
-            <h3 className="text-[11px] font-medium uppercase tracking-brand text-sand-400">
+            <h3 className="text-[11px] uppercase tracking-[0.28em] text-background/35">
               Контакты
             </h3>
 
-            <ul className="mt-5 space-y-3 text-sm text-sand-200">
+            <ul className="mt-5 space-y-3 text-sm text-background/70">
               <li>Ставрополь</li>
               <li>Россия</li>
             </ul>
@@ -73,20 +67,20 @@ export default function Footer() {
 
         </div>
 
+        {/* BOTTOM */}
+        <div className="mt-14 flex flex-col gap-3 border-t border-background/10 pt-7 sm:flex-row sm:items-center sm:justify-between">
 
-        {/* ===================================================
-            BOTTOM
-        =================================================== */}
+          <p className="text-[11px] uppercase tracking-[0.22em] text-background/30">
+            © BY NADIA, 2026
+          </p>
 
-        <div className="mt-14 flex flex-col gap-2 border-t border-sand-50/10 pt-8 text-xs text-sand-400 sm:flex-row sm:items-center sm:justify-between">
-          <span>© BY NADIA, 2026</span>
+          <p className="text-[11px] uppercase tracking-[0.22em] text-background/30">
+            Ателье · Швейное производство
+          </p>
 
-          <span className="tracking-wide">
-            Швейное мастерство для людей и брендов
-          </span>
         </div>
 
       </div>
     </footer>
-  );
+  )
 }

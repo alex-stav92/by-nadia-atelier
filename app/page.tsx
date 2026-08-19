@@ -4,7 +4,6 @@ import About from '@/components/home/About-home';
 import Atmosphere from '@/components/home/Atmosphere-home';
 import CtaSection from '@/components/home/CtaSection-home';
 import { SiteHeader } from '@/components/site-header'
-import { SiteFooter } from '@/components/site-footer'
 import { MobileCta } from '@/components/mobile-cta'
 import Header from '@/components/home/Header';
 import Footer from '@/components/home/Footer';

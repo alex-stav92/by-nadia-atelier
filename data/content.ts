@@ -10,59 +10,64 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export type Service = {
+  id: string;
   title: string;
   description: string;
-  image: string;
+  items: string[];
 };
 
 export const SERVICES: Service[] = [
   {
-    title: 'Худи и свитшоты',
-    description: 'Толстовки, худи и свитшоты из плотного трикотажа.',
-    image:
-      'https://images.pexels.com/photos/7479813/pexels-photo-7479813.jpeg?auto=compress&cs=tinysrgb&h=900&w=600',
+    id: 'small-batches',
+    title: 'Небольшие партии',
+    description:
+      'Берём в работу небольшие и средние объёмы, когда важно сохранить гибкость и контроль над результатом.',
+    items: [
+      'От нескольких изделий',
+      'Малые коллекции',
+      'Тестовые партии',
+      'Дропы',
+    ],
   },
+
   {
-    title: 'Трикотаж',
-    description: 'Работа с трикотажными полотнами разных плотностей.',
-    image:
-      'https://images.pexels.com/photos/38952493/pexels-photo-38952493.jpeg?auto=compress&cs=tinysrgb&h=900&w=600',
+    id: 'clothing',
+    title: 'Пошив одежды',
+    description:
+      'Производим изделия по вашему образцу, техническому заданию или готовым лекалам.',
+    items: [
+      'Худи и свитшоты',
+      'Футболки',
+      'Трикотаж',
+      'Брюки и костюмы',
+      'Простая верхняя одежда',
+    ],
   },
+
   {
-    title: 'Футболки',
-    description: 'Базовые и авторские футболки, лонгсливы, топы.',
-    image:
-      'https://images.pexels.com/photos/30710033/pexels-photo-30710033.jpeg?auto=compress&cs=tinysrgb&h=900&w=600',
+    id: 'merch',
+    title: 'Мерч и корпоративная одежда',
+    description:
+      'Создаём одежду и мерч для компаний, команд, мероприятий и собственных проектов.',
+    items: [
+      'Корпоративная одежда',
+      'Мерч',
+      'Форма для команды',
+      'Одежда для мероприятий',
+    ],
   },
+
   {
-    title: 'Корпоративная одежда',
-    description: 'Униформа и одежда для компаний и команд.',
-    image:
-      'https://images.pexels.com/photos/9594147/pexels-photo-9594147.jpeg?auto=compress&cs=tinysrgb&h=900&w=600',
-  },
-  {
-    title: 'Мерч',
-    description: 'Брендированный мерч для брендов и проектов.',
-    image:
-      'https://images.pexels.com/photos/9594078/pexels-photo-9594078.jpeg?auto=compress&cs=tinysrgb&h=900&w=600',
-  },
-  {
-    title: 'Небольшие коллекции',
-    description: 'Пошив капсульных коллекций и отдельных моделей.',
-    image:
-      'https://images.pexels.com/photos/18257675/pexels-photo-18257675.jpeg?auto=compress&cs=tinysrgb&h=900&w=600',
-  },
-  {
-    title: 'Костюмы',
-    description: 'Костюмы и комплекты для разных задач.',
-    image:
-      'https://images.pexels.com/photos/38269421/pexels-photo-38269421.jpeg?auto=compress&cs=tinysrgb&h=900&w=600',
-  },
-  {
+    id: 'custom',
     title: 'Индивидуальные проекты',
-    description: 'Нестандартные изделия и сложные задачи.',
-    image:
-      'https://images.pexels.com/photos/5830644/pexels-photo-5830644.jpeg?auto=compress&cs=tinysrgb&h=900&w=600',
+    description:
+      'Подключаемся к нестандартным задачам и помогаем пройти путь от первого образца до готовой партии.',
+    items: [
+      'Образец изделия',
+      'Работа по лекалам',
+      'Доработка модели',
+      'Нестандартные задачи',
+    ],
   },
 ];
 
