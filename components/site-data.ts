@@ -166,10 +166,10 @@ export const CONTACTS = {
   phoneHref: 'tel:+79614584820',
 
   telegram: 'Написать в Telegram',
-  telegramHref: 'https://t.me/bynadia26',
+  telegramHref: 'https://web.telegram.org/k/#@ByNadia26',
 
   max: 'Написать в MAX',
-  maxHref: 'ССЫЛКА_НА_MAX',
+  maxHref: 'https://max.ru/u/f9LHodD0cOKqztAgt3rTXh1nkeDbZf1YI0SaRBV9cNuDRUJX_i4dbZ0PBls',
 
   vk: 'Перейти в Вконтакте',
   vkHref: 'https://m.vk.com/bynadia26',
@@ -188,13 +188,13 @@ export const CONTACT_LINKS = [
     label: 'MAX',
     value: 'Написать в MAX',
     icon: 'MAX',
-    href: 'ССЫЛКА_НА_MAX',
+    href: 'https://max.ru/u/f9LHodD0cOKqztAgt3rTXh1nkeDbZf1YI0SaRBV9cNuDRUJX_i4dbZ0PBls',
   },
   {
     label: 'Telegram',
     value: 'Написать в Telegram',
     icon: Send,
-    href: 'https://t.me/bynadia26',
+    href: 'https://web.telegram.org/k/#@ByNadia26',
   },
   {
     label: 'Вконтакте',
