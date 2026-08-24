@@ -1,37 +1,6 @@
 import { Phone, Send, MessageCircle, MapPin, MessageSquareText, MessagesSquare } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
-const CONTACTS = [
-  {
-    label: 'Телефон',
-    value: '+7 999 123-45-67',
-    icon: Phone,
-    href: 'tel:+79991234567',
-  },
-  {
-    label: 'MAX',
-    value: 'Написать в MAX',
-    icon: MessageSquareText,
-    href: 'ССЫЛКА_НА_MAX',
-  },
-  {
-    label: 'Telegram',
-    value: 'Написать в Telegram',
-    icon: Send,
-    href: 'https://t.me/bynadia26',
-  },
-  {
-  label: 'Вконтакте',
-  value: 'Перейти в Вконтакте',
-  icon: "VK",
-  href: 'https://m.vk.com/bynadia26',
-}
-  // {
-  //   label: 'WhatsApp',
-  //   value: 'Написать в WhatsApp',
-  //   icon: MessageCircle,
-  //   href: 'https://wa.me/79991234567',
-  // },
-]
+
 import { CONTACT_LINKS } from '../../components/site-data'
 export function Contacts() {
   return (
@@ -46,10 +15,15 @@ export function Contacts() {
           <p className="mt-2 max-w-sm text-pretty leading-relaxed text-primary-foreground/70">
             Ателье индивидуального пошива и ремонта одежды.
           </p>
-          <p className="mt-5 flex items-center gap-2.5 text-primary-foreground/80">
-            <MapPin className="size-4 text-accent-foreground/80" />
-            Ставрополь
-          </p>
+<a
+  href="ССЫЛКА_НА_ЯНДЕКС_КАРТЫ"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-5 flex w-fit items-center gap-2.5 text-primary-foreground/80 transition-colors hover:text-primary-foreground"
+>
+  <MapPin className="size-4 text-accent-foreground/80" />
+  <span>Ставрополь, ваш адрес</span>
+</a>
         </Reveal>
 
         <Reveal delay={120} className="flex flex-col gap-3">
