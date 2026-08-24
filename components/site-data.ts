@@ -1,4 +1,8 @@
-
+import {
+  Phone,
+  Send,
+  MessageSquareText,
+} from 'lucide-react'
 
 export type Service = {
   id: string
@@ -125,22 +129,7 @@ export const FAQ = [
     a: 'Сроки зависят от вида и сложности работы. Уточним их при обсуждении заказа.',
   },
 ]
-export const CONTACTS = {
-  city: 'Ставрополь',
-  country: 'Россия',
 
-  phone: 'Добавить позже',
-  phoneHref: '#',
-
-  telegram: 'Добавить позже',
-  telegramHref: '#',
-
-  whatsapp: 'Добавить позже',
-  whatsappHref: '#',
-
-  email: 'Добавить позже',
-  emailHref: '#',
-}
 export const NAV_LINKS = [
   { label: 'Услуги', href: '#services' },
   { label: 'Работы', href: '#works' },
@@ -167,5 +156,50 @@ export const DIRECTIONS = [
     label: 'Production',
     description: 'Брендам и компаниям',
     href: '/production',
+  },
+]
+export const CONTACTS = {
+  city: 'Ставрополь',
+  country: 'Россия',
+
+  phone: '+7 961 458-48-20',
+  phoneHref: 'tel:+79614584820',
+
+  telegram: 'Написать в Telegram',
+  telegramHref: 'https://t.me/bynadia26',
+
+  max: 'Написать в MAX',
+  maxHref: 'ССЫЛКА_НА_MAX',
+
+  vk: 'Перейти в Вконтакте',
+  vkHref: 'https://m.vk.com/bynadia26',
+
+  email: 'Добавить позже',
+  emailHref: '#',
+}
+export const CONTACT_LINKS = [
+  {
+    label: 'Телефон',
+    value: '+7 961 458-48-20',
+    icon: Phone,
+    href: 'tel:+79614584820',
+  },
+  {
+    label: 'MAX',
+    value: 'Написать в MAX',
+    icon: 'MAX',
+    href: 'ССЫЛКА_НА_MAX',
+  },
+  {
+    label: 'Telegram',
+    value: 'Написать в Telegram',
+    icon: Send,
+    href: 'https://t.me/bynadia26',
+  },
+  {
+    label: 'Вконтакте',
+    value: 'Перейти в Вконтакте',
+    icon: 'VK',
+    href: 'https://m.vk.com/bynadia26',
   },
 ]

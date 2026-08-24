@@ -11,7 +11,7 @@ export default function Faq() {
   const { ref, visible } = useReveal<HTMLDivElement>()
 
   return (
-    <section className="border-t border-border/60 bg-secondary/40 py-20 md:py-28">
+    <section className="border-t border-border/60 bg-secondary/40 py-0 sm:py-8 md:py-12 lg:py-20">
       <div
         ref={ref}
         className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16"
@@ -63,7 +63,7 @@ export default function Faq() {
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className="group flex w-full items-center justify-between gap-6 py-5 text-left md:py-6"
+                  className="cursor-pointer group flex w-full items-center justify-between gap-6 py-5 text-left md:py-6"
                 >
                   <span
                     className={cn(

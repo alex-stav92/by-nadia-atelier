@@ -9,7 +9,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="border-t border-border/60 py-20 md:py-28"
+      className="border-t border-border/60 py-0 sm:py-8 md:py-12 lg:py-20"
     >
       <div ref={ref} className="container-x">
 

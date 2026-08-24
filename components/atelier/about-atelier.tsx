@@ -5,7 +5,7 @@ const ADVANTAGES = ['Индивидуальный подход', 'Аккурат
 
 export function About() {
   return (
-    <section id="about" className="border-t border-border/60 bg-secondary/40 py-20 md:py-28">
+    <section id="about" className="border-t border-border/60 bg-secondary/40 py-0 sm:py-8 md:py-12 lg:py-20">
       <div className="container-x grid items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
         <Reveal>
           <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] bg-secondary">

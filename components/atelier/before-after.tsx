@@ -72,7 +72,7 @@ function CompareSlider({
 
 export function BeforeAfter() {
   return (
-    <section className="border-t border-border/60 py-20 md:py-28">
+    <section className="border-t border-border/60 py-0 sm:py-8 md:py-12 lg:py-20">
       <div className="container-x">
         <Reveal className="max-w-2xl">
           <p className="text-xs uppercase tracking-[0.32em] text-accent">До / После</p>

@@ -44,7 +44,7 @@ export function SiteHeader() {
         <div className="container-x flex h-16 items-center justify-between md:h-20">
           <a href="#top" className="flex h-full items-center">
             <img
-              src="/images/image.png"
+              src="/ .png"
               className="h-[90%] w-auto object-contain"
               alt="By Nadia"
             />

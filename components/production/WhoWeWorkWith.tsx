@@ -7,7 +7,7 @@ export default function WhoWeWorkWith() {
   const { ref, visible } = useReveal<HTMLDivElement>()
 
   return (
-    <section className="border-t border-border/60 bg-background py-20 md:py-28">
+    <section className="border-t border-border/60 bg-background py-0 sm:py-8 md:py-12 lg:py-20">
       <div ref={ref} className="container-x">
 
         {/* HEADER */}

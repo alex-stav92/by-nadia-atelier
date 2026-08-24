@@ -10,7 +10,7 @@ export function Faq() {
   const [open, setOpen] = useState<number | null>(0)
 
   return (
-    <section className="border-t border-border/60 bg-secondary/40 py-20 md:py-28">
+    <section className="border-t border-border/60 bg-secondary/40 py-0 sm:py-8 md:py-12 lg:py-20">
       <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
 
         {/* HEADER */}
@@ -40,7 +40,7 @@ export function Faq() {
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className="group flex w-full items-center justify-between gap-4 py-5 text-left transition-transform duration-200 active:scale-[0.99] md:py-6"
+                  className="cursor-pointer group flex w-full items-center justify-between gap-4 py-5 text-left transition-transform duration-200 active:scale-[0.99] md:py-6"
                 >
                   <span
                     className={cn(

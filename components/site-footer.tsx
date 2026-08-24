@@ -27,10 +27,10 @@ export default function Footer() {
       <div className="container-x py-16 md:py-20">
 
         {/* MAIN */}
-        <div className="grid gap-12 md:grid-cols-12 md:gap-10">
+        <div className="grid gap-12 md:grid-cols-4 md:gap-10">
 
           {/* BRAND */}
-          <div className="md:col-span-4 max-w-sm">
+          <div className="max-w-sm">
             <Link
               href="/"
               className="font-serif text-2xl tracking-[0.18em] transition-opacity duration-300 hover:opacity-70"
@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* NAVIGATION */}
           {currentNav && (
-            <div className="md:col-span-3">
+            <div>
               <h3 className="text-[11px] uppercase tracking-[0.28em] text-background/35">
                 Навигация
               </h3>
@@ -78,12 +78,15 @@ export default function Footer() {
 
 
           {/* DIRECTIONS */}
-          <div className={currentNav ? 'md:col-span-2' : 'md:col-span-4'}>
+          <div>
             <h3 className="text-[11px] uppercase tracking-[0.28em] text-background/35">
               Направления
             </h3>
 
-            <nav className="mt-5" aria-label="Направления BY NADIA">
+            <nav
+              className="mt-5"
+              aria-label="Направления BY NADIA"
+            >
               <ul className="space-y-4">
                 {DIRECTIONS.map((direction) => {
                   const active =
@@ -119,7 +122,7 @@ export default function Footer() {
 
 
           {/* CONTACTS */}
-          <div className={currentNav ? 'md:col-span-3' : 'md:col-span-4'}>
+          <div>
             <h3 className="text-[11px] uppercase tracking-[0.28em] text-background/35">
               Контакты
             </h3>

@@ -13,7 +13,7 @@ export default function IntroTrust() {
   const { ref, visible } = useReveal<HTMLDivElement>()
 
   return (
-    <section className="border-t border-border/60 py-20 md:py-28">
+    <section className="border-t border-border/60 ">
       <div
         ref={ref}
         className="container-x"

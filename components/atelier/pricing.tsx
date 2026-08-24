@@ -4,7 +4,7 @@ import { PRICING } from '@/components/site-data'
 
 export function Pricing() {
   return (
-    <section id="pricing" className="border-t border-border/60 bg-secondary/40 py-20 md:py-28">
+    <section id="pricing" className="border-t border-border/60 bg-secondary/40 py-0 sm:py-8 md:py-12 lg:py-20">
       <div className="container-x">
         <Reveal className="max-w-2xl">
           <p className="text-xs uppercase tracking-[0.32em] text-accent">Стоимость</p>
