@@ -55,17 +55,13 @@ export default function Header() {
           {/* =================================================
               LOGO
           ================================================= */}
-
-          <Link
-            href="/"
-            className="group flex items-center"
-            aria-label="BY NADIA — на главную"
-          >
-            <span className="font-serif text-xl font-medium tracking-[0.12em] text-foreground transition-opacity duration-300 group-hover:opacity-60 sm:text-2xl">
-              BY NADIA
-            </span>
-          </Link>
-
+          <a href="#top" className="flex h-full items-center">
+            <img
+              src="/logo2.png"
+              className="h-[90%] w-auto object-contain"
+              alt="By Nadia"
+            />
+          </a>
           {/* =================================================
               DESKTOP NAVIGATION
           ================================================= */}
