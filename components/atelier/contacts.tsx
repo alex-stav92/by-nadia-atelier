@@ -1,4 +1,4 @@
-import { MapPin } from 'lucide-react'
+import { Clock3, MapPin } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 
 import { CONTACT_LINKS, CONTACTS } from '../../components/site-data'
@@ -27,6 +27,8 @@ export function Contacts() {
             Ателье индивидуального пошива и ремонта одежды.
           </p>
 
+          {/* ADDRESS */}
+
           <a
             href={CONTACTS.mapsHref}
             target="_blank"
@@ -49,6 +51,22 @@ export function Contacts() {
               </span>
             </span>
           </a>
+
+          {/* WORKING HOURS */}
+
+          <div className="mt-5 flex w-fit items-start gap-3 text-primary-foreground/80">
+            <Clock3 className="mt-0.5 size-5 shrink-0 text-accent-foreground/80" />
+
+            <span className="flex flex-col">
+              <span className="text-sm text-primary-foreground/50">
+                График работы
+              </span>
+
+              <span className="mt-0.5 text-base">
+                {CONTACTS.hours}
+              </span>
+            </span>
+          </div>
         </Reveal>
 
         <Reveal

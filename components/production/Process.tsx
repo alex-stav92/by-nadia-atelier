@@ -31,7 +31,7 @@ export default function Process() {
               animationDelay: '100ms',
             }}
           >
-            Как мы работаем
+            От идеи до готовой партии
           </h2>
 
           <p
@@ -42,11 +42,10 @@ export default function Process() {
               animationDelay: '180ms',
             }}
           >
-            От первого обсуждения задачи до готовой партии —
-            последовательно проходим каждый этап производства.
+            Прозрачный процесс без лишних сложностей: на каждом этапе
+            вы понимаете, что происходит с вашим заказом.
           </p>
         </div>
-
 
         {/* =================================================
             DESKTOP TIMELINE
@@ -56,9 +55,11 @@ export default function Process() {
           <div className="relative">
 
             {/* BASE LINE */}
+
             <div className="absolute left-0 right-0 top-7 h-px bg-border" />
 
             {/* ANIMATED LINE */}
+
             <div
               className={`absolute left-0 top-7 h-px bg-accent transition-all duration-[1200ms] ease-out ${
                 visible ? 'w-full' : 'w-0'
@@ -69,8 +70,8 @@ export default function Process() {
             />
 
             {/* STEPS */}
-            <div className="relative grid grid-cols-6 gap-6">
 
+            <div className="relative grid grid-cols-6 gap-6">
               {PROCESS_STEPS.map((step, i) => (
                 <article
                   key={step.num}
@@ -84,10 +85,9 @@ export default function Process() {
 
                   {/* NUMBER */}
 
-<div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border border-accent/40 bg-secondary font-serif text-lg text-accent transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-background">
-  {step.num}
-</div>
-
+                  <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border border-accent/40 bg-secondary font-serif text-lg text-accent transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-background">
+                    {step.num}
+                  </div>
 
                   {/* CONTENT */}
 
@@ -96,18 +96,16 @@ export default function Process() {
                       {step.title}
                     </h3>
 
-                    <p className="mx-auto mt-3 max-w-[190px] text-sm leading-relaxed text-muted-foreground">
+                    <p className="mx-auto mt-3 max-w-[200px] text-sm leading-relaxed text-muted-foreground">
                       {step.description}
                     </p>
                   </div>
 
                 </article>
               ))}
-
             </div>
           </div>
         </div>
-
 
         {/* =================================================
             MOBILE TIMELINE
@@ -134,7 +132,6 @@ export default function Process() {
             {/* STEPS */}
 
             <div className="space-y-10">
-
               {PROCESS_STEPS.map((step, i) => (
                 <article
                   key={step.num}
@@ -154,7 +151,6 @@ export default function Process() {
                     </span>
                   </div>
 
-
                   {/* CONTENT */}
 
                   <div className="pt-1">
@@ -169,7 +165,6 @@ export default function Process() {
 
                 </article>
               ))}
-
             </div>
           </div>
         </div>

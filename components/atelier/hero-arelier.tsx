@@ -8,7 +8,7 @@ export function Hero() {
         <div className="animate-fade-up">
           <p className="flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-muted-foreground">
             <span className="h-px w-8 bg-accent" />
-            АТЕЛЬЕ · СТАВРОПОЛЬ
+            Ателье ByNadia · Ставрополь
           </p>
 
           <h1 className="mt-6 font-serif text-[2.6rem] leading-[1.05] tracking-tight text-balance text-foreground sm:text-6xl lg:text-7xl">
@@ -22,10 +22,16 @@ export function Hero() {
             От небольшой починки до вещи с нуля — по вашим меркам и задумке.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <CtaButton href="#contacts" size="lg" variant="accent">
-              Обсудить заказ
-            </CtaButton>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-start">
+            <div className="flex flex-col items-start">
+              <CtaButton href="#contacts" size="lg" variant="accent">
+                Обсудить заказ
+              </CtaButton>
+
+              <p className="mt-2 max-w-[220px] text-xs leading-relaxed text-muted-foreground">
+                Можно просто прислать фото вещи — подскажем, что можно сделать.
+              </p>
+            </div>
 
             <CtaButton href="#works" size="lg" variant="outline">
               Посмотреть работы
@@ -55,10 +61,12 @@ export function Hero() {
 
             <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/20 bg-background/80 px-5 py-4 backdrop-blur-md">
               <p className="font-serif text-lg text-foreground">
-                Индивидуальный подход к каждой вещи
+                Сначала разбираемся — потом шьём
               </p>
+
               <p className="mt-0.5 text-sm text-muted-foreground">
-                Разбираемся в задаче и предлагаем подходящее решение
+                Посмотрим на вещь, обсудим задачу и предложим решение,
+                которое действительно подойдёт.
               </p>
             </div>
           </div>

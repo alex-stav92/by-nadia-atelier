@@ -242,6 +242,8 @@ export const CONTACTS = {
   mapsHref:
     'https://yandex.com/maps/36/stavropol/house/ulitsa_50_let_vlksm_33/YEgYfwVgSEIHQFpvfXxwcH5hbQ%3D%3D/',
 
+  hours: 'Пн–Пт, 8:00–19:00',
+
   phone: '+7 961 458-48-20',
   phoneHref: 'tel:+79614584820',
 
@@ -255,7 +257,6 @@ export const CONTACTS = {
   vk: 'Перейти во ВКонтакте',
   vkHref: 'https://m.vk.com/bynadia26',
 }
-
 export const CONTACT_LINKS = [
   {
     label: 'Телефон',
