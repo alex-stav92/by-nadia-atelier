@@ -24,7 +24,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-foreground text-background">
-      <div className="container-x py-16 md:py-20">
+      <div className="container-x py-14 md:py-16">
 
         {/* MAIN */}
         <div className="grid gap-12 md:grid-cols-4 md:gap-10">
@@ -47,7 +47,6 @@ export default function Footer() {
               {CONTACTS.city}, {CONTACTS.country}
             </p>
           </div>
-
 
           {/* NAVIGATION */}
           {currentNav && (
@@ -75,7 +74,6 @@ export default function Footer() {
               </nav>
             </div>
           )}
-
 
           {/* DIRECTIONS */}
           <div>
@@ -120,59 +118,86 @@ export default function Footer() {
             </nav>
           </div>
 
-
           {/* CONTACTS */}
           <div>
             <h3 className="text-[11px] uppercase tracking-[0.28em] text-background/35">
               Контакты
             </h3>
 
-            <ul className="mt-5 space-y-3">
+            <div className="mt-5 space-y-4">
 
-              <li>
+              {/* ADDRESS */}
+              <a
+                href={CONTACTS.mapsHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <span className="block text-sm text-background/70 transition-colors duration-300 group-hover:text-background">
+                  {CONTACTS.address}
+                </span>
+
+                <span className="mt-1 block text-[11px] text-background/35">
+                  Открыть в Яндекс Картах →
+                </span>
+              </a>
+
+              {/* HOURS */}
+              <div>
+                <span className="block text-sm text-background/70">
+                  {CONTACTS.hours}
+                </span>
+
+                <span className="mt-1 block text-[11px] text-background/35">
+                  График работы
+                </span>
+              </div>
+
+              {/* PHONE */}
+              <a
+                href={CONTACTS.phoneHref}
+                className="block text-sm text-background/70 transition-colors duration-300 hover:text-background"
+              >
+                {CONTACTS.phone}
+              </a>
+
+              {/* SOCIALS */}
+              <div className="flex flex-wrap gap-x-4 gap-y-2 pt-1">
                 <a
                   href={CONTACTS.telegramHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-background/70 transition-colors duration-300 hover:text-background"
                 >
-                  Telegram — {CONTACTS.telegram}
+                  Telegram
                 </a>
-              </li>
 
-              <li>
                 <a
-                  href={CONTACTS.whatsappHref}
+                  href={CONTACTS.maxHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-background/70 transition-colors duration-300 hover:text-background"
                 >
-                  WhatsApp — {CONTACTS.whatsapp}
+                  MAX
                 </a>
-              </li>
 
-              <li>
                 <a
-                  href={CONTACTS.phoneHref}
+                  href={CONTACTS.vkHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-background/70 transition-colors duration-300 hover:text-background"
                 >
-                  {CONTACTS.phone}
+                  ВКонтакте
                 </a>
-              </li>
+              </div>
 
-              <li>
-                <a
-                  href={CONTACTS.emailHref}
-                  className="text-sm text-background/70 transition-colors duration-300 hover:text-background"
-                >
-                  {CONTACTS.email}
-                </a>
-              </li>
-
-            </ul>
+            </div>
           </div>
 
         </div>
 
-
         {/* BOTTOM */}
-        <div className="mt-14 flex flex-col gap-3 border-t border-background/10 pt-7 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-3 border-t border-background/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
 
           <p className="text-[11px] uppercase tracking-[0.22em] text-background/30">
             © BY NADIA, 2026

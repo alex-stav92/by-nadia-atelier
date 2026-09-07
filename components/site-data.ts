@@ -214,9 +214,9 @@ export const NAV_LINKS = [
 
 export const PRODUCTION_NAV_LINKS = [
   { label: 'Услуги', href: '#services' },
-  { label: 'Работы', href: '#works' },
-  { label: 'О нас', href: '#about' },
-  { label: 'Как заказать', href: '#process' },
+  { label: 'Проекты', href: '#works' },
+  { label: 'Почему мы', href: '#about' },
+  { label: 'Процесс', href: '#process' },
   { label: 'Контакты', href: '#contacts' },
 ]
 
