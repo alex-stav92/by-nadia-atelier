@@ -6,10 +6,14 @@ export function Services() {
     <section id="services" className="border-t border-border/60 py-0 sm:py-8 md:py-12 lg:py-20">
       <div className="container-x">
         <Reveal className="max-w-2xl">
-          <p className="text-xs uppercase tracking-[0.32em] text-accent">Услуги</p>
+          <p className="text-xs uppercase tracking-[0.32em] text-accent">
+            Услуги
+          </p>
+
           <h2 className="mt-4 font-serif text-4xl leading-tight text-balance text-foreground md:text-5xl">
             Что нужно сделать?
           </h2>
+
           <p className="mt-4 text-lg text-muted-foreground">
             От небольшой починки до создания вещи с нуля.
           </p>
@@ -23,10 +27,19 @@ export function Services() {
               className="group flex flex-col bg-card p-8 transition-colors duration-300 hover:bg-secondary/60 md:p-10"
             >
               <div className="flex items-baseline gap-3">
-                <span className="font-serif text-xl text-accent">0{i + 1}</span>
-                <h3 className="font-serif text-2xl text-foreground md:text-3xl">{service.title}</h3>
+                <span className="font-serif text-xl text-accent">
+                  0{i + 1}
+                </span>
+
+                <h3 className="font-serif text-2xl text-foreground md:text-3xl">
+                  {service.title}
+                </h3>
               </div>
-              <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">{service.description}</p>
+
+              <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+                {service.description}
+              </p>
+
               <ul className="mt-6 flex flex-wrap gap-2">
                 {service.items.map((item) => (
                   <li
